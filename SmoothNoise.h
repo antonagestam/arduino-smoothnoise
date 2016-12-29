@@ -15,7 +15,7 @@ class SmoothNoise {
 
     public:
         SmoothNoise(int num_steps);
-        float noise(void);
+        float next(void);
 };
 
 #endif
