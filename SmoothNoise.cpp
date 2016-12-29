@@ -28,7 +28,7 @@ SmoothNoise::SmoothNoise(int num_steps) {
     last = R();
 }
 
-float SmoothNoise::noise(void) {
+float SmoothNoise::next(void) {
     if(steps_from_last == steps) {
         steps_from_last = 0;
         last = next;
