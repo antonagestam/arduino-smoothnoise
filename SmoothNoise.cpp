@@ -24,17 +24,18 @@ float R () {
 SmoothNoise::SmoothNoise(int num_steps) {
     steps = num_steps;
     steps_from_last = random(steps);
-    next = R();
-    last = R();
+    next_val = R();
+    last_val = R();
 }
 
 float SmoothNoise::next(void) {
     if(steps_from_last == steps) {
         steps_from_last = 0;
-        last = next;
-        next = R();
+        last_val = next_val;
+        next_val = R();
     }
-    float current = cubic_interpolate(steps_from_last, 0, steps, last, next);
+    float current = cubic_interpolate(
+        steps_from_last, 0, steps, last_val, next_val);
     steps_from_last++;
     return current;
 }

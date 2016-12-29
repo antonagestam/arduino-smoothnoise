@@ -8,8 +8,8 @@ float cubic(float n);
 float cubic_interpolate(float n, float a, float b, float c, float d);
 
 class SmoothNoise {
-    float last;
-    float next;
+    float last_val;
+    float next_val;
     int steps;
     int steps_from_last;
 
