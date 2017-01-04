@@ -7,7 +7,7 @@ between them using a cubic curve.
 #include "SmoothNoise.h"
 
 int steps = 50; // number of interpolated values
-SmoothNoise n = SmoothNoise(50);
+SmoothNoise n = SmoothNoise(steps);
 
 println(n.next());
 ```
