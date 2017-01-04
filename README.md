@@ -1,9 +1,13 @@
 # arduino-smoothnoise
 
+Generates random values and then generates interpolated values 
+between them using a cubic curve.
+
 ```c++
 #include "SmoothNoise.h"
 
-SmoothNoise n = SmoothNoise(100);
+int steps = 50; // number of interpolated values
+SmoothNoise n = SmoothNoise(50);
 
 println(n.next());
 ```
